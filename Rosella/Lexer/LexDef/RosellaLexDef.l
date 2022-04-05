@@ -8,6 +8,10 @@
 %{
 #define RETURN_TOKEN(_tok)	return _tok
 #include "Lexer/Tokens.h"
+
+#if !_WIN32
+#include <unistd.h> // Fix for compilation error on Mac with nounistd. 
+#endif
 %}
 
 NEWLINE			[\n]

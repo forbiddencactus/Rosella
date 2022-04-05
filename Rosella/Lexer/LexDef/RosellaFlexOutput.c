@@ -493,14 +493,18 @@ static const flex_int16_t yy_chk[174] =
 #define yymore() yymore_used_but_not_detected
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
-#line 1 "RosellaLexDef.l"
-#line 2 "RosellaLexDef.l"
+#line 1 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
+#line 2 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
  /* %option c++ */
 #define YY_NO_UNISTD_H 1
 #define RETURN_TOKEN(_tok)	return _tok
 #include "Lexer/Tokens.h"
-#line 502 "RosellaFlexOutput.c"
-#line 503 "RosellaFlexOutput.c"
+
+#if !_WIN32
+#include <unistd.h> // Fix for compilation error on Mac with nounistd. 
+#endif
+#line 506 "RosellaFlexOutput.c"
+#line 507 "RosellaFlexOutput.c"
 
 #define INITIAL 0
 
@@ -760,9 +764,9 @@ YY_DECL
 		}
 
 	{
-#line 23 "RosellaLexDef.l"
+#line 27 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 
-#line 765 "RosellaFlexOutput.c"
+#line 769 "RosellaFlexOutput.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -822,314 +826,314 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 24 "RosellaLexDef.l"
+#line 28 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(TOK_WHITESPACE); }
 	YY_BREAK
 /* Logical operators... */
 case 2:
 YY_RULE_SETUP
-#line 27 "RosellaLexDef.l"
+#line 31 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_LOG_AND); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 28 "RosellaLexDef.l"
+#line 32 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_LOG_OR); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 29 "RosellaLexDef.l"
+#line 33 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_LOG_NOT); }
 	YY_BREAK
 /* Bitwise operators... */
 case 5:
 YY_RULE_SETUP
-#line 32 "RosellaLexDef.l"
+#line 36 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_BIT_AND); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 33 "RosellaLexDef.l"
+#line 37 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_BIT_OR); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 34 "RosellaLexDef.l"
+#line 38 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_BIT_XOR); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 35 "RosellaLexDef.l"
+#line 39 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_BIT_LEFTSHIFT); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 36 "RosellaLexDef.l"
+#line 40 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_BIT_RIGHTSHIFT); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 37 "RosellaLexDef.l"
+#line 41 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_BIT_NOT); }
 	YY_BREAK
 /* Arithmetic operators... */
 case 11:
 YY_RULE_SETUP
-#line 40 "RosellaLexDef.l"
+#line 44 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ARI_INC); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 41 "RosellaLexDef.l"
+#line 45 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ARI_DEC); }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 42 "RosellaLexDef.l"
+#line 46 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ARI_MUL); }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 43 "RosellaLexDef.l"
+#line 47 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ARI_DIV); }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 44 "RosellaLexDef.l"
+#line 48 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ARI_ADD); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 45 "RosellaLexDef.l"
+#line 49 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ARI_SUB); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 46 "RosellaLexDef.l"
+#line 50 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ARI_MOD); }
 	YY_BREAK
 /* Assignment operators... */
 case 18:
 YY_RULE_SETUP
-#line 49 "RosellaLexDef.l"
+#line 53 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 50 "RosellaLexDef.l"
+#line 54 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_MUL); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 51 "RosellaLexDef.l"
+#line 55 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_DIV); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 52 "RosellaLexDef.l"
+#line 56 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_MOD); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 53 "RosellaLexDef.l"
+#line 57 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_ADD); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 54 "RosellaLexDef.l"
+#line 58 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_SUB); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 55 "RosellaLexDef.l"
+#line 59 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_AND); }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 56 "RosellaLexDef.l"
+#line 60 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_OR); }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 57 "RosellaLexDef.l"
+#line 61 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_XOR); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 58 "RosellaLexDef.l"
+#line 62 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_LEFTSHIFT); }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 59 "RosellaLexDef.l"
+#line 63 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_ASSIGN_RIGHTSHIFT); }
 	YY_BREAK
 /* Equality operators... */
 case 29:
 YY_RULE_SETUP
-#line 62 "RosellaLexDef.l"
+#line 66 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_EQ); }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 63 "RosellaLexDef.l"
+#line 67 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_EQ_LESSTHAN); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 64 "RosellaLexDef.l"
+#line 68 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_EQ_GREATERTHAN); }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 65 "RosellaLexDef.l"
+#line 69 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_EQ_LESSOREQUAL); }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 66 "RosellaLexDef.l"
+#line 70 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_EQ_GREATEROREQUAL); }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 67 "RosellaLexDef.l"
+#line 71 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(OP_EQ_NOTEQUAL); }
 	YY_BREAK
 /* Type specifier... */
 case 35:
 YY_RULE_SETUP
-#line 70 "RosellaLexDef.l"
+#line 74 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(TYPE_SPCF_VOID); }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 71 "RosellaLexDef.l"
+#line 75 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(TYPE_SPCF_INT); }
 	YY_BREAK
 /* Type qualifier... */
 case 37:
 YY_RULE_SETUP
-#line 74 "RosellaLexDef.l"
+#line 78 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(TYPE_QUAL_LET); }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 75 "RosellaLexDef.l"
+#line 79 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(TYPE_QUAL_VAR); }
 	YY_BREAK
 /* Statements... */
 case 39:
 YY_RULE_SETUP
-#line 78 "RosellaLexDef.l"
+#line 82 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_RETURN); }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 79 "RosellaLexDef.l"
+#line 83 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_BREAK); }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 80 "RosellaLexDef.l"
+#line 84 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_CONTINUE); }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 81 "RosellaLexDef.l"
+#line 85 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_FUNC); }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 82 "RosellaLexDef.l"
+#line 86 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_IF); }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 83 "RosellaLexDef.l"
+#line 87 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_ELSE); }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 84 "RosellaLexDef.l"
+#line 88 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_WHILE); }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 85 "RosellaLexDef.l"
+#line 89 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_FOR); }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 86 "RosellaLexDef.l"
+#line 90 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_DO); }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 87 "RosellaLexDef.l"
+#line 91 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_SWITCH); }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 88 "RosellaLexDef.l"
+#line 92 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_CASE); }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 89 "RosellaLexDef.l"
+#line 93 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(STA_DEFAULT); }
 	YY_BREAK
 /* Other syntax */
 case 51:
 YY_RULE_SETUP
-#line 92 "RosellaLexDef.l"
+#line 96 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_LPAREN); }
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 93 "RosellaLexDef.l"
+#line 97 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_RPAREN); }
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 94 "RosellaLexDef.l"
+#line 98 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_LBRACE); }
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 95 "RosellaLexDef.l"
+#line 99 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_RBRACE); }
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 96 "RosellaLexDef.l"
+#line 100 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_SEMICOLON); }
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 97 "RosellaLexDef.l"
+#line 101 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_COMMA); }
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 98 "RosellaLexDef.l"
+#line 102 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_DOT); }
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 99 "RosellaLexDef.l"
+#line 103 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_QUESTION); }
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 100 "RosellaLexDef.l"
+#line 104 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 { RETURN_TOKEN(SYN_COLON); }
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
-#line 104 "RosellaLexDef.l"
+#line 108 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 ECHO;
 	YY_BREAK
-#line 1132 "RosellaFlexOutput.c"
+#line 1136 "RosellaFlexOutput.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2298,6 +2302,6 @@ void yyfree (void * ptr , yyscan_t yyscanner)
 
 #define YYTABLES_NAME "yytables"
 
-#line 104 "RosellaLexDef.l"
+#line 108 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 
 

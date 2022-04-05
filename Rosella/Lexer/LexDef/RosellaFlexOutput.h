@@ -484,7 +484,7 @@ extern int yylex (yyscan_t yyscanner);
 #undef yyTABLES_NAME
 #endif
 
-#line 104 "RosellaLexDef.l"
+#line 108 "/Users/forbiddencactus/Documents/Code/Rosella/Rosella/Lexer/LexDef/RosellaLexDef.l"
 
 
 #line 490 "RosellaFlexOutput.h"
