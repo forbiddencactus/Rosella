@@ -44,8 +44,8 @@ assignment_operator(A) ::= OP_ASSIGN_OR.            { A = new ASTOperatorAssignm
 ident_node(A) ::= IDENT(B). { A = new ASTNodeIdent(B); }
 
 // Enumerator...
-// enumerator(A) ::= ident_node(B).                       
-// enumerator(A) ::= IDENT OP_ASSIGN constant_expression. {}
+// enumerator(A) ::= ident_node(B). { A = B; }                       
+// enumerator(A) ::= IDENT(B) OP_ASSIGN constant_expression(C). { A = new ASTEnumerator(B, C); }
 
 // Enumerator list...
 // enumerator_list ::= enumerator.
@@ -61,7 +61,7 @@ ident_node(A) ::= IDENT(B). { A = new ASTNodeIdent(B); }
 // struct_or_union ::= UNION.
 
 // Constant expression...
-constant_expression ::= conditional_expression.
+constant_expression(A) ::= conditional_expression(B). { A = B; }
 
 // STRUCT DECLARATOR
 // struct_declarator ::= declarator.
@@ -91,26 +91,26 @@ type_name(A) ::= TYPE_SPCF_INT.     { A = new ASTNodeTypeName(TYPE_SPCF_INT); }
 
 // Type specifier..
 type_specifier(A) ::= type_name(B).                 { A = B; } 
-type_specifier(A) ::= type_name(B) SYN_QUESTION.    { A = ((ASTNodeType*)B)->SetNullable(true); }
+type_specifier(A) ::= type_name(B) SYN_QUESTION.    { A = B->As<ASTNodeType>->SetNullable(true); }
 
 // Type declaration...
 type_declaration(A) ::= TYPE_QUAL_LET type_specifier(B). { A = B;}
-type_declaration(A) ::= TYPE_QUAL_VAR type_specifier(B). { A = ((ASTNodeType*)B)->SetLet(false);}
+type_declaration(A) ::= TYPE_QUAL_VAR type_specifier(B). { A = B->As<ASTNodeType>->SetLet(false);}
 
 // Argument expression list...
-argument_expression_list ::= assignment_expression.
-argument_expression_list ::= argument_expression_list SYN_COMMA assignment_expression.
+argument_expression_list(A) ::= assignment_expression(B). { A = B; }
+argument_expression_list(A) ::= argument_expression_list(B) SYN_COMMA assignment_expression(C). { A = ASTNodeList::CreateOrAddToList<ASTExpressionArgumentList>(B, C);}
 
 // Primary expression...
-primary_expression ::= IDENT.
-primary_expression ::= NUMBER.
+primary_expression(A) ::= IDENT(B). { A = new ASTExpressionPrimaryIdentifier(B); }
+primary_expression(A) ::= NUMBER(B). { A = new ASTExpressionPrimaryNumber(B); }
 //primary_expression ::= CHARACTER.
 //primary_expression ::= FLOATING.
 //primary_expression ::= STRING_LITERAL.
-primary_expression ::= SYN_LPAREN expression SYN_RPAREN.
+primary_expression(A) ::= SYN_LPAREN expression(B) SYN_RPAREN. { A = B; }
 
 // Postfix expression...
-postfix_expression ::= primary_expression.
+postfix_expression ::= primary_expression. { A = B; }
 postfix_expression ::= postfix_expression SYN_LBRACE expression SYN_RBRACE.
 postfix_expression ::= postfix_expression SYN_LPAREN argument_expression_list SYN_RPAREN.
 postfix_expression ::= postfix_expression SYN_LPAREN SYN_RPAREN.
