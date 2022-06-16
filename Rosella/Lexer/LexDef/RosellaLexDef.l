@@ -21,11 +21,13 @@ WHITESPACE	    {WSCHAR}+|({WSCHAR}*\\{NEWLINE})+{WSCHAR}*
 
 DIGIT           [0-9]
 IDENT		    [_a-zA-Z]([_a-zA-Z0-9]|{UNIV})*
-NUMBER		    {DIGIT}+
+INTEGER		    {DIGIT}+
 FRACTIONAL	    ([0-9]+\.)|([0-9]*\.[0-9]+)
 
 %%
 {WHITESPACE}    { RETURN_TOKEN(TOK_WHITESPACE); }
+{INTEGER}       { /*yyVal.intVal = atoi(yytext);*/ RETURN_TOKEN(LI_INTEGER); }
+{FRACTIONAL}    { /*yyVal.floatVal = atof(yytext);*/ RETURN_TOKEN(LI_FLOAT); }
 
  /* Logical operators... */
 "&&"        { RETURN_TOKEN(OP_LOG_AND); }

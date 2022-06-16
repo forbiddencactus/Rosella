@@ -5,6 +5,13 @@ typedef enum rosellaToken
 {
 TOK_WHITESPACE = 0,
 
+// Literals...
+LI_INTEGER,
+LI_FLOAT,
+
+// Ident...
+TOK_IDENT,
+
 // Logical operators...
 OP_LOG_AND,
 OP_LOG_OR,

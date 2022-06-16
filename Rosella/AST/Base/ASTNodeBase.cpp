@@ -1,12 +1,10 @@
 #include "AST/Base/ASTNodeBase.h"
 using namespace Rosella;
 
-ASTNodeBase* ASTNodeBase::GetParent()
-{
-    return Parent;
-}
+//extern int yylineno;
 
-void ASTNodeBase::SetParent(ASTNodeBase* parent)
+ASTNodeBase::ASTNodeBase()
 {
-    Parent = parent;
+    // TODO: Find a reentrant, thread safe version of this. 
+    //LineNumber = yylineno;
 }
