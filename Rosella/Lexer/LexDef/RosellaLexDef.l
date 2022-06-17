@@ -4,6 +4,7 @@
 %option noyywrap
 %option reentrant
 %option nounistd
+%option yylineno
 
 %{
 #define RETURN_TOKEN(_tok)	return _tok
@@ -25,9 +26,9 @@ INTEGER		    {DIGIT}+
 FRACTIONAL	    ([0-9]+\.)|([0-9]*\.[0-9]+)
 
 %%
-{WHITESPACE}    { RETURN_TOKEN(TOK_WHITESPACE); }
-{INTEGER}       { /*yyVal.intVal = atoi(yytext);*/ RETURN_TOKEN(LI_INTEGER); }
-{FRACTIONAL}    { /*yyVal.floatVal = atof(yytext);*/ RETURN_TOKEN(LI_FLOAT); }
+ /* {WHITESPACE}    { RETURN_TOKEN(TOK_WHITESPACE); } */
+{INTEGER}       { RETURN_TOKEN(LI_INTEGER); }
+{FRACTIONAL}    { RETURN_TOKEN(LI_FLOAT); }
 
  /* Logical operators... */
 "&&"        { RETURN_TOKEN(OP_LOG_AND); }
@@ -74,7 +75,6 @@ FRACTIONAL	    ([0-9]+\.)|([0-9]*\.[0-9]+)
 
  /* Type specifier... */
 void        { RETURN_TOKEN(TYPE_SPCF_VOID); }
-int			{ RETURN_TOKEN(TYPE_SPCF_INT); }
 
  /* Type qualifier... */
 let			{ RETURN_TOKEN(TYPE_QUAL_LET); }

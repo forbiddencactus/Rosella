@@ -3,7 +3,8 @@
 
 typedef enum rosellaToken
 {
-TOK_WHITESPACE = 0,
+TOK_EOF = 0,
+TOK_WHITESPACE,
 
 // Literals...
 LI_INTEGER,
@@ -57,7 +58,6 @@ OP_EQ_NOTEQUAL,
 
 // Type specifiers...
 TYPE_SPCF_VOID,
-TYPE_SPCF_INT,
 
 // Type qualifiers...
 TYPE_QUAL_LET,
@@ -87,9 +87,6 @@ SYN_COMMA,
 SYN_DOT,
 SYN_QUESTION,
 SYN_COLON,
-
-// End token. 
-TOK_END_TOKEN, 
 
 // Null token.
 TOK_NULL

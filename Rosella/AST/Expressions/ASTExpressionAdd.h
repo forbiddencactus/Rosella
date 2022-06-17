@@ -5,7 +5,7 @@
 
 namespace Rosella
 {
-    class ASTExpression: public ASTNodeBase
+    class ASTExpressionAdd: public ASTNodeBase
     {
 
     };
